@@ -12,7 +12,6 @@ const years = document.createElement('option');
 const max = new Date().getFullYear();
 const min = max - 10;
 
-
 for(let i = max; i >  min; i--) {
     const option =  document.createElement('option');
     option.value = i;
@@ -55,13 +54,11 @@ minimo.addEventListener('input', e => {
     filtrarAuto();
 });
 
-
 maximo.addEventListener('input', e => {
     datosBusqueda.maximo = Number(e.target.value);
     // Mandar llamar la función de filtrar Autos
     filtrarAuto();
 });
-
 
 puertas.addEventListener('input', e => {
     datosBusqueda.puertas = Number(e.target.value);
@@ -125,7 +122,6 @@ function filtrarAuto() {
        noResultado();
    }
 }
-
 
 // Aplica los filtros
 function filtrarMarca(auto) {
